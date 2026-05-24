@@ -136,6 +136,8 @@ common:
     url: https://www.rubrik.com/company/trust
   - type: LinkedIn
     url: https://www.linkedin.com/company/rubrik-inc/
+  - type: LLMsTxt
+    url: https://developer.rubrik.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
