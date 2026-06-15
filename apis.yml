@@ -13,131 +13,133 @@ description: >-
 kind: company
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Backup
-  - Cyber Recovery
-  - Data Security
-  - Data Security Posture Management
-  - GraphQL
-  - Ransomware Recovery
-  - REST API
-  - SaaS Protection
-  - Threat Analytics
-  - Zero Trust
+- Backup
+- Cyber Recovery
+- Data Security
+- Data Security Posture Management
+- GraphQL
+- Ransomware Recovery
+- REST API
+- SaaS Protection
+- Threat Analytics
+- Zero Trust
 url: >-
   https://raw.githubusercontent.com/api-evangelist/rubrik/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.19'
 apis:
-  - aid: rubrik:rubrik-security-cloud-api
-    name: Rubrik Security Cloud API
-    description: >-
-      The Rubrik Security Cloud (RSC) API is a single-endpoint GraphQL API at
-      /api/graphql that exposes the full RSC platform, including SLA domain
-      management and assignment, on-demand backups, recovery operations, data
-      security posture, data threat analytics, observability, SaaS app
-      protection, and reporting. The API is introspectable and is supported by
-      an in-product API Playground IDE.
-    humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
-    tags:
-      - Backup
-      - Cyber Recovery
-      - Data Security Posture
-      - GraphQL
-      - Threat Analytics
-    properties:
-      - type: Documentation
-        url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
-      - type: APIPlayground
-        url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/API-playground/
-      - type: Authentication
-        url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/Authentication/
-      - type: APIPlaygroundDocs
-        url: https://docs.rubrik.com/en-us/saas/gql/api_playground.html
-  - aid: rubrik:rubrik-cluster-api
-    name: Rubrik Cluster API
-    description: >-
-      REST API exposed by on-premises Rubrik clusters (CDM) with v1, v2, and
-      internal endpoints for managing protected objects, SLA domains, backup
-      jobs, recovery, cluster configuration, events, and reports. Provides the
-      foundation for the rubrik-sdk-for-python and rubrik-sdk-for-powershell
-      tooling.
-    humanURL: https://developer.rubrik.com/Rubrik-Cluster-API/
-    tags:
-      - Backup
-      - CDM
-      - On-Premises
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://developer.rubrik.com/Rubrik-Cluster-API/
-      - type: APIReference
-        url: https://rubrikinc.github.io/rubrik-api-documentation/
-  - aid: rubrik:rubrik-powershell-sdk
-    name: Rubrik PowerShell Module
-    description: >-
-      Fully-supported PowerShell module for automating Rubrik Security Cloud
-      using cmdlets that wrap the underlying GraphQL API.
-    humanURL: https://github.com/rubrikinc/rubrik-powershell-sdk
-    tags:
-      - PowerShell
-      - SDK
-      - Automation
-    properties:
-      - type: SourceCode
-        url: https://github.com/rubrikinc/rubrik-powershell-sdk
-      - type: PowerShellGallery
-        url: https://www.powershellgallery.com/packages/rubriksecuritycloud
-  - aid: rubrik:rubrik-terraform-provider
-    name: Rubrik Polaris Terraform Provider
-    description: >-
-      Terraform provider for managing Rubrik Security Cloud (Polaris)
-      resources as infrastructure-as-code.
-    humanURL: https://registry.terraform.io/providers/rubrikinc/polaris/
-    tags:
-      - Infrastructure as Code
-      - Polaris
-      - Terraform
-    properties:
-      - type: Registry
-        url: https://registry.terraform.io/providers/rubrikinc/polaris/
-      - type: SourceCode
-        url: https://github.com/rubrikinc/terraform-provider-polaris
-common:
-  - type: Website
-    url: https://www.rubrik.com/
-  - type: DeveloperPortal
-    url: https://developer.rubrik.com/
+- aid: rubrik:rubrik-security-cloud-api
+  name: Rubrik Security Cloud API
+  description: >-
+    The Rubrik Security Cloud (RSC) API is a single-endpoint GraphQL API at
+    /api/graphql that exposes the full RSC platform, including SLA domain
+    management and assignment, on-demand backups, recovery operations, data
+    security posture, data threat analytics, observability, SaaS app
+    protection, and reporting. The API is introspectable and is supported by
+    an in-product API Playground IDE.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Backup
+  - Cyber Recovery
+  - Data Security Posture
+  - GraphQL
+  - Threat Analytics
+  properties:
   - type: Documentation
-    url: https://docs.rubrik.com/
-  - type: GitHubOrganization
-    url: https://github.com/rubrikinc
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   - type: APIPlayground
     url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/API-playground/
-  - type: SDKs
-    url: https://developer.rubrik.com/SDKs-and-Tools/
-  - type: Integrations
-    url: https://developer.rubrik.com/Integrations/
-  - type: Support
-    url: https://support.rubrik.com/
-  - type: Blog
-    url: https://www.rubrik.com/blog
-  - type: Customers
-    url: https://www.rubrik.com/customers
-  - type: Partners
-    url: https://www.rubrik.com/partners
-  - type: AboutUs
-    url: https://www.rubrik.com/company
-  - type: InvestorRelations
-    url: https://ir.rubrik.com/
-  - type: Careers
-    url: https://www.rubrik.com/company/careers
-  - type: TrustCenter
-    url: https://www.rubrik.com/company/trust
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/rubrik-inc/
-  - type: LLMsTxt
-    url: https://developer.rubrik.com/llms.txt
+  - type: Authentication
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/Authentication/
+  - type: APIPlaygroundDocs
+    url: https://docs.rubrik.com/en-us/saas/gql/api_playground.html
+  - url: graphql/rubrik-graphql.md
+    type: GraphQL
+- aid: rubrik:rubrik-cluster-api
+  name: Rubrik Cluster API
+  description: >-
+    REST API exposed by on-premises Rubrik clusters (CDM) with v1, v2, and
+    internal endpoints for managing protected objects, SLA domains, backup
+    jobs, recovery, cluster configuration, events, and reports. Provides the
+    foundation for the rubrik-sdk-for-python and rubrik-sdk-for-powershell
+    tooling.
+  humanURL: https://developer.rubrik.com/Rubrik-Cluster-API/
+  tags:
+  - Backup
+  - CDM
+  - On-Premises
+  - REST API
+  properties:
+  - type: Documentation
+    url: https://developer.rubrik.com/Rubrik-Cluster-API/
+  - type: APIReference
+    url: https://rubrikinc.github.io/rubrik-api-documentation/
+- aid: rubrik:rubrik-powershell-sdk
+  name: Rubrik PowerShell Module
+  description: >-
+    Fully-supported PowerShell module for automating Rubrik Security Cloud
+    using cmdlets that wrap the underlying GraphQL API.
+  humanURL: https://github.com/rubrikinc/rubrik-powershell-sdk
+  tags:
+  - PowerShell
+  - SDK
+  - Automation
+  properties:
+  - type: SourceCode
+    url: https://github.com/rubrikinc/rubrik-powershell-sdk
+  - type: PowerShellGallery
+    url: https://www.powershellgallery.com/packages/rubriksecuritycloud
+- aid: rubrik:rubrik-terraform-provider
+  name: Rubrik Polaris Terraform Provider
+  description: >-
+    Terraform provider for managing Rubrik Security Cloud (Polaris)
+    resources as infrastructure-as-code.
+  humanURL: https://registry.terraform.io/providers/rubrikinc/polaris/
+  tags:
+  - Infrastructure as Code
+  - Polaris
+  - Terraform
+  properties:
+  - type: Registry
+    url: https://registry.terraform.io/providers/rubrikinc/polaris/
+  - type: SourceCode
+    url: https://github.com/rubrikinc/terraform-provider-polaris
+common:
+- type: Website
+  url: https://www.rubrik.com/
+- type: DeveloperPortal
+  url: https://developer.rubrik.com/
+- type: Documentation
+  url: https://docs.rubrik.com/
+- type: GitHubOrganization
+  url: https://github.com/rubrikinc
+- type: APIPlayground
+  url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/API-playground/
+- type: SDKs
+  url: https://developer.rubrik.com/SDKs-and-Tools/
+- type: Integrations
+  url: https://developer.rubrik.com/Integrations/
+- type: Support
+  url: https://support.rubrik.com/
+- type: Blog
+  url: https://www.rubrik.com/blog
+- type: Customers
+  url: https://www.rubrik.com/customers
+- type: Partners
+  url: https://www.rubrik.com/partners
+- type: AboutUs
+  url: https://www.rubrik.com/company
+- type: InvestorRelations
+  url: https://ir.rubrik.com/
+- type: Careers
+  url: https://www.rubrik.com/company/careers
+- type: TrustCenter
+  url: https://www.rubrik.com/company/trust
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rubrik-inc/
+- type: LLMsTxt
+  url: https://developer.rubrik.com/llms.txt
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
