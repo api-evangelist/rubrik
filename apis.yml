@@ -138,7 +138,7 @@ common:
   url: https://www.rubrik.com/company/trust
 - type: LinkedIn
   url: https://www.linkedin.com/company/rubrik-inc/
-- type: LLMsTxt
+- type: LlmsText
   url: https://developer.rubrik.com/llms.txt
 maintainers:
 - FN: Kin Lane
