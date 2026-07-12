@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/rubrik-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: OAuth2 access token obtained via /client_token or /oauth/token.
+  sources:
+  - openapi/rubrik-openapi.yml

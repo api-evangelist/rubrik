@@ -106,6 +106,10 @@ apis:
   - type: SourceCode
     url: https://github.com/rubrikinc/terraform-provider-polaris
 common:
+- type: DomainSecurity
+  url: security/rubrik-domain-security.yml
+- type: Authentication
+  url: authentication/rubrik-authentication.yml
 - type: Website
   url: https://www.rubrik.com/
 - type: DeveloperPortal
