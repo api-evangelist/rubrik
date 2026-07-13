@@ -2,11 +2,13 @@
   "repo": "rubrik",
   "feeds": [
     {
-      "source": "https://www.rubrik.com/blog",
+      "source": "https://support.rubrik.com/",
+      "feed_url": "https://support.rubrik.com/",
+      "title": "",
       "saved": 0,
-      "error": "HTTP 403 Forbidden on blog listing"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T13:06:43Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
