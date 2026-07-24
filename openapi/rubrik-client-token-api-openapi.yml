@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: Rubrik Security Cloud Client Token API
+  description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
+
+    protection, recovery, and security operations. All operations are
+
+    performed via a single GraphQL endpoint using HTTP POST.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Rubrik Developer Center
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+servers:
+- url: https://{rsc_fqdn}/api
+  description: Rubrik Security Cloud instance
+  variables:
+    rsc_fqdn:
+      default: example.my.rubrik.com
+      description: Fully qualified domain name of the RSC instance.
+security:
+- bearerAuth: []
+tags:
+- name: Client Token
+paths:
+  /client_token:
+    post:
+      summary: Issue an OAuth2 access token (service account)
+      description: 'Submits client credentials (client_id, client_secret, grant_type)
+
+        and returns an OAuth2 access token used as a bearer token on
+
+        subsequent API calls.
+
+        '
+      operationId: createClientToken
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - client_id
+              - client_secret
+              - grant_type
+              properties:
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+                grant_type:
+                  type: string
+                  enum:
+                  - client_credentials
+      responses:
+        '200':
+          description: Access token issued
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  expires_in:
+                    type: integer
+                  token_type:
+                    type: string
+        '401':
+          description: Invalid credentials
+      tags:
+      - Client Token
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth2 access token obtained via /client_token or /oauth/token.

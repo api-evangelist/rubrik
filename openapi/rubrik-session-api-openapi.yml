@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Rubrik Security Cloud Client Token Session API
+  description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
+
+    protection, recovery, and security operations. All operations are
+
+    performed via a single GraphQL endpoint using HTTP POST.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Rubrik Developer Center
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+servers:
+- url: https://{rsc_fqdn}/api
+  description: Rubrik Security Cloud instance
+  variables:
+    rsc_fqdn:
+      default: example.my.rubrik.com
+      description: Fully qualified domain name of the RSC instance.
+security:
+- bearerAuth: []
+tags:
+- name: Session
+paths:
+  /session:
+    delete:
+      summary: Revoke the current session
+      description: Revokes the session associated with the supplied bearer token.
+      operationId: revokeSession
+      responses:
+        '204':
+          description: Session revoked
+        '401':
+          description: Missing or invalid bearer token
+      tags:
+      - Session
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth2 access token obtained via /client_token or /oauth/token.

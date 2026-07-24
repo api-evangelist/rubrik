@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: Rubrik Security Cloud Client Token Oauth API
+  description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
+
+    protection, recovery, and security operations. All operations are
+
+    performed via a single GraphQL endpoint using HTTP POST.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Rubrik Developer Center
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+servers:
+- url: https://{rsc_fqdn}/api
+  description: Rubrik Security Cloud instance
+  variables:
+    rsc_fqdn:
+      default: example.my.rubrik.com
+      description: Fully qualified domain name of the RSC instance.
+security:
+- bearerAuth: []
+tags:
+- name: Oauth
+paths:
+  /oauth/token:
+    post:
+      summary: Exchange an authorization code for an access token
+      description: OAuth2 Authorization Code with PKCE token exchange endpoint.
+      operationId: exchangeAuthorizationCode
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - grant_type
+              - code
+              - code_verifier
+              - client_id
+              - redirect_uri
+              properties:
+                grant_type:
+                  type: string
+                  enum:
+                  - authorization_code
+                code:
+                  type: string
+                code_verifier:
+                  type: string
+                client_id:
+                  type: string
+                redirect_uri:
+                  type: string
+      responses:
+        '200':
+          description: Access token issued
+        '400':
+          description: Invalid request
+      tags:
+      - Oauth
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth2 access token obtained via /client_token or /oauth/token.

@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: Rubrik Security Cloud Client Token Graphql API
+  description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
+
+    protection, recovery, and security operations. All operations are
+
+    performed via a single GraphQL endpoint using HTTP POST.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Rubrik Developer Center
+    url: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+servers:
+- url: https://{rsc_fqdn}/api
+  description: Rubrik Security Cloud instance
+  variables:
+    rsc_fqdn:
+      default: example.my.rubrik.com
+      description: Fully qualified domain name of the RSC instance.
+security:
+- bearerAuth: []
+tags:
+- name: Graphql
+paths:
+  /graphql:
+    post:
+      summary: Execute a GraphQL query or mutation
+      description: 'Single GraphQL endpoint for all RSC operations. Submit GraphQL
+
+        queries and mutations as JSON. Responses contain only the fields
+
+        requested in the query.
+
+        '
+      operationId: executeGraphQL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - query
+              properties:
+                query:
+                  type: string
+                  description: GraphQL query or mutation document.
+                variables:
+                  type: object
+                  additionalProperties: true
+                operationName:
+                  type: string
+      responses:
+        '200':
+          description: GraphQL response payload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    additionalProperties: true
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+        '401':
+          description: Missing or invalid bearer token
+      tags:
+      - Graphql
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth2 access token obtained via /client_token or /oauth/token.
