@@ -11,7 +11,20 @@ description: >-
   Postman collections through the Rubrik Developer Center at
   developer.rubrik.com.
 kind: company
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rubrik.png
 tags:
 - Backup
 - Cyber Recovery
@@ -32,12 +45,10 @@ apis:
 - aid: rubrik:rubrik-security-cloud-api
   name: Rubrik Security Cloud API
   description: >-
-    The Rubrik Security Cloud (RSC) API is a single-endpoint GraphQL API at
-    /api/graphql that exposes the full RSC platform, including SLA domain
-    management and assignment, on-demand backups, recovery operations, data
-    security posture, data threat analytics, observability, SaaS app
-    protection, and reporting. The API is introspectable and is supported by
-    an in-product API Playground IDE.
+    The Rubrik Security Cloud (RSC) API is a single-endpoint GraphQL API at /api/graphql that exposes
+    the full RSC platform, including SLA domain management and assignment, on-demand backups, recovery
+    operations, data security posture, data threat analytics, observability, SaaS app protection, and
+    reporting. The API is introspectable and is supported by an in-product API Playground IDE.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
   - Backup
@@ -59,11 +70,9 @@ apis:
 - aid: rubrik:rubrik-cluster-api
   name: Rubrik Cluster API
   description: >-
-    REST API exposed by on-premises Rubrik clusters (CDM) with v1, v2, and
-    internal endpoints for managing protected objects, SLA domains, backup
-    jobs, recovery, cluster configuration, events, and reports. Provides the
-    foundation for the rubrik-sdk-for-python and rubrik-sdk-for-powershell
-    tooling.
+    REST API exposed by on-premises Rubrik clusters (CDM) with v1, v2, and internal endpoints for managing
+    protected objects, SLA domains, backup jobs, recovery, cluster configuration, events, and reports.
+    Provides the foundation for the rubrik-sdk-for-python and rubrik-sdk-for-powershell tooling.
   humanURL: https://developer.rubrik.com/Rubrik-Cluster-API/
   tags:
   - Backup
@@ -78,8 +87,8 @@ apis:
 - aid: rubrik:rubrik-powershell-sdk
   name: Rubrik PowerShell Module
   description: >-
-    Fully-supported PowerShell module for automating Rubrik Security Cloud
-    using cmdlets that wrap the underlying GraphQL API.
+    Fully-supported PowerShell module for automating Rubrik Security Cloud using cmdlets that wrap the
+    underlying GraphQL API.
   humanURL: https://github.com/rubrikinc/rubrik-powershell-sdk
   tags:
   - PowerShell
@@ -93,8 +102,7 @@ apis:
 - aid: rubrik:rubrik-terraform-provider
   name: Rubrik Polaris Terraform Provider
   description: >-
-    Terraform provider for managing Rubrik Security Cloud (Polaris)
-    resources as infrastructure-as-code.
+    Terraform provider for managing Rubrik Security Cloud (Polaris) resources as infrastructure-as-code.
   humanURL: https://registry.terraform.io/providers/rubrikinc/polaris/
   tags:
   - Infrastructure as Code
@@ -105,6 +113,42 @@ apis:
     url: https://registry.terraform.io/providers/rubrikinc/polaris/
   - type: SourceCode
     url: https://github.com/rubrikinc/terraform-provider-polaris
+- aid: rubrik:rubrik-client-token-api
+  name: Rubrik Client Token API
+  description: The Client Token API from Rubrik — 1 operation(s) for client token.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Client Token
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-client-token-api-openapi.yml
+- aid: rubrik:rubrik-graphql-api
+  name: Rubrik Graphql API
+  description: The Graphql API from Rubrik — 1 operation(s) for graphql.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Graphql
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-graphql-api-openapi.yml
+- aid: rubrik:rubrik-oauth-api
+  name: Rubrik Oauth API
+  description: The Oauth API from Rubrik — 1 operation(s) for oauth.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Oauth
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-oauth-api-openapi.yml
+- aid: rubrik:rubrik-session-api
+  name: Rubrik Session API
+  description: The Session API from Rubrik — 1 operation(s) for session.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Session
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-session-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/rubrik-agentic-access.yml
