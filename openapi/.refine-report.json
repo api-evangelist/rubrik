@@ -1,0 +1,20 @@
+{
+  "provider": "rubrik",
+  "sources": [
+    "rubrik-client-token-api-openapi.yml",
+    "rubrik-graphql-api-openapi.yml",
+    "rubrik-oauth-api-openapi.yml",
+    "rubrik-session-api-openapi.yml"
+  ],
+  "outputs": [
+    "rubrik-client-token-api-openapi.yml",
+    "rubrik-graphql-api-openapi.yml",
+    "rubrik-oauth-api-openapi.yml",
+    "rubrik-session-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
