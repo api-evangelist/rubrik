@@ -150,6 +150,9 @@ apis:
   - type: OpenAPI
     url: openapi/rubrik-session-api-openapi.yml
 common:
+- type: License
+  name: MIT
+  url: https://github.com/rubrikinc/rubrik-powershell-sdk/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/rubrik-agentic-access.yml
 - type: DomainSecurity
