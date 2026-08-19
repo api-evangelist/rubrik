@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rubrik Security Cloud Client Token Session API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Session",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Revoke the current session",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{rsc_fqdn}/api/session"
+          },
+          "docs": "Revokes the session associated with the supplied bearer token."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rubrik Security Cloud Client Token API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Client Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Issue an OAuth2 access token (service account)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{rsc_fqdn}/api/client_token",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits client credentials (client_id, client_secret, grant_type)\nand returns an OAuth2 access token used as a bearer token on\nsubsequent API calls.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,178 @@
+{
+  "item": [
+    {
+      "id": "efc076a9-f235-4eeb-bb29-2c21ed57da8e",
+      "name": "Session",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff5fcb3e-4173-4231-a603-3a23c1bec761",
+          "name": "Revoke the current session",
+          "request": {
+            "name": "Revoke the current session",
+            "description": {
+              "content": "Revokes the session associated with the supplied bearer token.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "session"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Fully qualified domain name of the RSC instance.",
+                  "type": "any",
+                  "value": "{{rsc_fqdn}}",
+                  "key": "rsc_fqdn"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f3d0623-3489-49f3-857c-334be68344c4",
+              "name": "Session revoked",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "session"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Fully qualified domain name of the RSC instance.",
+                      "type": "any",
+                      "value": "{{rsc_fqdn}}",
+                      "key": "rsc_fqdn"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2b893513-82b6-441c-899b-08416cd0f892",
+              "name": "Missing or invalid bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "session"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Fully qualified domain name of the RSC instance.",
+                      "type": "any",
+                      "value": "{{rsc_fqdn}}",
+                      "key": "rsc_fqdn"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Fully qualified domain name of the RSC instance.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example.my.rubrik.com",
+      "key": "rsc_fqdn"
+    },
+    {
+      "type": "string",
+      "value": "https://{{rsc_fqdn}}/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0c4a4dcc-b35a-4635-aa26-f9bac6b34004",
+    "name": "Rubrik Security Cloud Client Token Session API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data\nprotection, recovery, and security operations. All operations are\nperformed via a single GraphQL endpoint using HTTP POST.\n\n\nContact Support:\n Name: Rubrik Developer Center",
+      "type": "text/plain"
+    }
+  }
+}

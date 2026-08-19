@@ -1,0 +1,217 @@
+{
+  "item": [
+    {
+      "id": "96bb51cd-d8ef-47ff-8ada-ee54865a1420",
+      "name": "Client Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5eaf6562-d7f3-4137-b66a-d46cfea7036f",
+          "name": "Issue an OAuth2 access token (service account)",
+          "request": {
+            "name": "Issue an OAuth2 access token (service account)",
+            "description": {
+              "content": "Submits client credentials (client_id, client_secret, grant_type)\nand returns an OAuth2 access token used as a bearer token on\nsubsequent API calls.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "client_token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Fully qualified domain name of the RSC instance.",
+                  "type": "any",
+                  "value": "{{rsc_fqdn}}",
+                  "key": "rsc_fqdn"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client_id\": \"<string>\",\n  \"client_secret\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "eb0bd849-8764-4c5d-b8fb-a418dc3e4888",
+              "name": "Access token issued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "client_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Fully qualified domain name of the RSC instance.",
+                      "type": "any",
+                      "value": "{{rsc_fqdn}}",
+                      "key": "rsc_fqdn"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"client_secret\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"access_token\": \"string\",\n  \"expires_in\": 7918,\n  \"token_type\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93d00c70-6cb1-4c18-9e88-64ece555f219",
+              "name": "Invalid credentials",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "client_token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Fully qualified domain name of the RSC instance.",
+                      "type": "any",
+                      "value": "{{rsc_fqdn}}",
+                      "key": "rsc_fqdn"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client_id\": \"<string>\",\n  \"client_secret\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Fully qualified domain name of the RSC instance.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example.my.rubrik.com",
+      "key": "rsc_fqdn"
+    },
+    {
+      "type": "string",
+      "value": "https://{{rsc_fqdn}}/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "594d8362-3378-44ce-b3b4-5ca3606d285e",
+    "name": "Rubrik Security Cloud Client Token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data\nprotection, recovery, and security operations. All operations are\nperformed via a single GraphQL endpoint using HTTP POST.\n\n\nContact Support:\n Name: Rubrik Developer Center",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rubrik Security Cloud Client Token Graphql API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Graphql",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute a GraphQL query or mutation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{rsc_fqdn}/api/graphql",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Single GraphQL endpoint for all RSC operations. Submit GraphQL\nqueries and mutations as JSON. Responses contain only the fields\nrequested in the query.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
