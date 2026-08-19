@@ -40,7 +40,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/rubrik/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: rubrik:rubrik-security-cloud-api
   name: Rubrik Security Cloud API
