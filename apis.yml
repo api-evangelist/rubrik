@@ -11,6 +11,19 @@ description: >-
   Postman collections through the Rubrik Developer Center at
   developer.rubrik.com.
 kind: company
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -156,6 +169,10 @@ apis:
   - type: OpenAPI
     url: openapi/rubrik-session-api-openapi.yml
 common:
+- type: IssueTracker
+  url: https://github.com/rubrikinc/rubrik-powershell-sdk/issues
+- type: Releases
+  url: https://github.com/rubrikinc/rubrik-powershell-sdk/releases
 - type: License
   name: MIT
   url: https://github.com/rubrikinc/rubrik-powershell-sdk/blob/main/LICENSE
