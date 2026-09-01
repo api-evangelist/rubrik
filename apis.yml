@@ -131,7 +131,7 @@ apis:
   description: The Client Token API from Rubrik — 1 operation(s) for client token.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
-  - Client Token
+  - Client-token
   tags_raw:
   - Client Token
   properties:
