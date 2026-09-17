@@ -138,28 +138,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/rubrik-client-token-api-openapi.yml
-- aid: rubrik:rubrik-graphql-api
-  name: Rubrik Graphql API
-  description: The Graphql API from Rubrik — 1 operation(s) for graphql.
-  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
-  tags:
-  - GraphQL
-  tags_raw:
-  - Graphql
-  properties:
-  - type: OpenAPI
-    url: openapi/rubrik-graphql-api-openapi.yml
-- aid: rubrik:rubrik-oauth-api
-  name: Rubrik Oauth API
-  description: The Oauth API from Rubrik — 1 operation(s) for oauth.
-  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
-  tags:
-  - Authentication
-  tags_raw:
-  - Oauth
-  properties:
-  - type: OpenAPI
-    url: openapi/rubrik-oauth-api-openapi.yml
 - aid: rubrik:rubrik-session-api
   name: Rubrik Session API
   description: The Session API from Rubrik — 1 operation(s) for session.
@@ -169,6 +147,24 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/rubrik-session-api-openapi.yml
+- aid: rubrik:rubrik-oauth-api
+  name: Rubrik OAUTH API
+  description: The Oauth API from Rubrik — 1 operation(s) for oauth.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Oauth
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-oauth-api-openapi.yml
+- aid: rubrik:rubrik-graph-ql-api
+  name: Rubrik Graph QL API
+  description: The Graph QL API from Rubrik — 1 operation(s) for graph ql.
+  humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
+  tags:
+  - Graph QL
+  properties:
+  - type: OpenAPI
+    url: openapi/rubrik-graph-ql-api-openapi.yml
 common:
 - type: IssueTracker
   url: https://github.com/rubrikinc/rubrik-powershell-sdk/issues
