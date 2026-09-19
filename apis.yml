@@ -143,6 +143,8 @@ apis:
   description: The Session API from Rubrik — 1 operation(s) for session.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
+  - Sessions
+  tags_raw:
   - Session
   properties:
   - type: OpenAPI
@@ -152,6 +154,8 @@ apis:
   description: The Oauth API from Rubrik — 1 operation(s) for oauth.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
+  - Authentication
+  tags_raw:
   - Oauth
   properties:
   - type: OpenAPI
@@ -161,6 +165,8 @@ apis:
   description: The Graph QL API from Rubrik — 1 operation(s) for graph ql.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
+  - GraphQL
+  tags_raw:
   - Graph QL
   properties:
   - type: OpenAPI
