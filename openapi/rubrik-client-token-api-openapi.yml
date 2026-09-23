@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Rubrik Security Cloud Client Token API
   description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
 
     protection, recovery, and security operations. All operations are
 
-    performed via a single GraphQL endpoint using HTTP POST.
-
-    '
+    performed via a single GraphQL endpoint using HTTP POST.'
   version: 1.0.0
   contact:
     name: Rubrik Developer Center
@@ -31,9 +29,7 @@ paths:
 
         and returns an OAuth2 access token used as a bearer token on
 
-        subsequent API calls.
-
-        '
+        subsequent API calls.'
       operationId: createClientToken
       security: []
       requestBody:

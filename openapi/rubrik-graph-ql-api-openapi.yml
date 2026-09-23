@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Rubrik Security Cloud Client Token Graphql API
+  title: Rubrik Security Cloud Graphql API
   description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
 
     protection, recovery, and security operations. All operations are
 
-    performed via a single GraphQL endpoint using HTTP POST.
-
-    '
+    performed via a single GraphQL endpoint using HTTP POST.'
   version: 1.0.0
   contact:
     name: Rubrik Developer Center
@@ -22,7 +20,7 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: Graphql
+- name: Graph QL
 paths:
   /graphql:
     post:
@@ -31,9 +29,7 @@ paths:
 
         queries and mutations as JSON. Responses contain only the fields
 
-        requested in the query.
-
-        '
+        requested in the query.'
       operationId: executeGraphQL
       requestBody:
         required: true
@@ -71,7 +67,7 @@ paths:
         '401':
           description: Missing or invalid bearer token
       tags:
-      - Graphql
+      - Graph QL
 components:
   securitySchemes:
     bearerAuth:
