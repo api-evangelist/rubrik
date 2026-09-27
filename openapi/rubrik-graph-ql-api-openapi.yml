@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Rubrik Security Cloud Graphql API
+  title: Rubrik Security Cloud GraphQL API
   description: 'Rubrik Security Cloud (RSC) exposes a GraphQL API for managing data
 
     protection, recovery, and security operations. All operations are

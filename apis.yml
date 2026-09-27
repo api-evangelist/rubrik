@@ -165,8 +165,6 @@ apis:
   description: The Graph QL API from Rubrik — 1 operation(s) for graph ql.
   humanURL: https://developer.rubrik.com/Rubrik-Security-Cloud-API/
   tags:
-  - GraphQL
-  tags_raw:
   - Graph QL
   properties:
   - type: OpenAPI

@@ -10,7 +10,7 @@
     "rubrik-session-api-openapi.yml"
   ],
   "archived": [
-    "deleted 2 superseded output(s) from the previous generation"
+    "deleted 1 superseded output(s) from the previous generation"
   ],
   "errors": [],
   "warnings": [],
@@ -25,13 +25,13 @@
     "rubrik-openapi.yml: declared missing tag: Graphql",
     "rubrik-openapi.yml: declared missing tag: Oauth",
     "rubrik-openapi.yml: declared missing tag: Session",
-    "superseded outputs removed: rubrik-graph-ql-api-openapi.yml, rubrik-o-auth-api-openapi.yml",
-    "apis.yml register: written (+2 apis, 8 total)"
+    "superseded outputs removed: rubrik-graph-ql-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 8 total)"
   ],
   "skipped": [
     "rubrik-client-token-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "rubrik-graph-ql-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "rubrik-o-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "rubrik-oauth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "rubrik-session-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
