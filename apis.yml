@@ -170,6 +170,12 @@ apis:
   - type: OpenAPI
     url: openapi/rubrik-graph-ql-api-openapi.yml
 common:
+- type: Plans
+  url: plans/rubrik-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/rubrik-rate-limits.yml
+- type: FinOps
+  url: finops/rubrik-finops.yml
 - type: IssueTracker
   url: https://github.com/rubrikinc/rubrik-powershell-sdk/issues
 - type: Releases
