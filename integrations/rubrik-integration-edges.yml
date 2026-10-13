@@ -1,0 +1,60 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+- https://azuremarketplace.microsoft.com/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=24032714-90d2-4026-858a-ab66e58d4c3d
+  listing_count: 6
+  apps:
+  - Rubrik Security Cloud
+  - Rubrik Cloud Vault on AWS
+  - Rubrik Agent Cloud
+  - Predibase - Developer Platform for Open Source LLMs
+  - Rubrik DevOps Protection for GitHub
+  seller_name: Rubrik Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Rubrik%2C%20Inc.
+  listing_count: 8
+  apps:
+  - Rubrik Integration for Microsoft 365 Backup Storage
+  - Rubrik for Dynamics 365 Protection
+  - Rubrik Cloud Data Management | Long Term Billing
+  - Rubrik DevOps Protection
+  - Rubrik Integration with Sentinel for Ransomware Protection
+  seller_name: Rubrik, Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Rubrik%20Inc.
+  listing_count: 1
+  apps:
+  - Rubrik Data Protection on Azure
+  seller_name: Rubrik Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
